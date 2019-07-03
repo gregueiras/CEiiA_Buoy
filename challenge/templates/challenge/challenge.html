@@ -8,7 +8,7 @@
 <body>
 {%include "indexapp/index.html"%}
 	<!-- Our web map and content will go here -->
-	<div id="map" style="width: 715px; height: 375px"></div>
+	<div id="map" style="width: 75%; height: 50%; margin: auto;"></div>
 	<!-- Add the Leaflet JavaScript library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
@@ -62,8 +62,12 @@
             }).addTo(map);
         });	
 	</script>
-<div class="produc_price" >
-	<a class="nav-link" href="{% url 'questions' %}">Desafio Semanal</a>
+<div class="produc_price mt-3 mx-auto" >
+    <button
+        class="btn"    
+    >
+        <a class="nav-link" href="{% url 'questions' %}">Desafio Semanal</a>
+    </button>
 </div>
 	  {%include "indexapp/footer.html"%}
 </body>

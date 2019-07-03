@@ -4,14 +4,13 @@
 	<title>Leaflet Map</title>
 	<!-- External Stylesheets -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <style>
-        #map { position:absolute; top:10%; bottom:0; left:10%; width:90%; }
-    </style>
 </head>
 <body>
 {% include "indexapp/index.html" %}
 	<!-- Our web map and content will go here -->
-	<div id="map"></div>
+    <div id="map" style="width: 75%; height: 50%; margin: auto;"></div>
+        {% include "indexapp/footer.html" %}
+
 	<!-- Add the Leaflet JavaScript library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
@@ -47,6 +46,7 @@
                 }
             }).addTo(map);
         });	
-	</script>
+    </script>
+    
 </body>
 </html>
