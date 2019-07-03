@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Jogo dos pares</title>
+	{%include "indexapp/index.html" %}
+	{%load staticfiles %}
+	<script type="text/javascript" src="{% static 'challenge/game.js'%}"></script>
+  	<link  rel="stylesheet" href="{% static 'challenge/game.css'%}">
+</head>
+<body onload="GameControl.createGame()">
+	<div  id="main" class="main">
+
+	<div id="score">
+	</div>
+	<div id="game">
+	</div>
+</div>
+<div class="produc_price" >
+	<a class="nav-link" href="{% url 'challenge' %}">Voltar</a>
+</div>
+</body>
+</html>

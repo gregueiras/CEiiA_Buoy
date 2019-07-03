@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Perguntas</title>
+	{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'challange/staticstyle.css' %}">
+    
+</head>
+<body>
+{%include "indexapp/index.html" %}
+
+    <div class="grid">
+        <div id="quiz">
+            <h1>Perguntas</h1>
+            <hr style="margin-bottom: 20px">
+
+            <p id="question"></p>
+
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Pergunta x de y</p>
+            </footer>
+        </div>
+    </div>
+
+ <div class="produc_price" >
+	<a class="nav-link" href="{% url 'game' %}">Continuar</a>
+</div>
+<script src="{% static 'challenge/quiz.js'%}"></script>
+<script src="{% static 'challenge/question.js'%}"></script>
+<script src="{% static 'challenge/db_question.js'%}"></script>
+<script src="{% static 'challenge/app.js'%}"></script>
+</body>
+</html>
