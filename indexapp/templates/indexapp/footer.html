@@ -4,6 +4,24 @@
 <head>
 
 <body>
+<style type="text/css">
+	#subscribeBtn {
+		width: 100%;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	#subscribeBtn:hover {
+		color: rgb(0, 123, 255);
+	}
+
+	#emailInput {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <section class="footer-section bg-dark pt-5">
 	<div class="container pb-3">
@@ -44,9 +62,17 @@
 					</div>
 					<div class="col-md-6">
 						<h5 class="text-white">Subscribe Now</h5>
-						<div class="input-group">
-						  <input class="form-control" aria-label="Amount (to the nearest dollar)" type="text">
-						  <li><a href="https://media.istockphoto.com/photos/thank-you-picture-id598953802?k=6&m=598953802&s=612x612&w=0&h=JgvaLqX4wUK-Zwr3l5gIsrSJZGYBXGnqSx3YHzT3XkM=" class="text-grey">Subscribe</a></li>
+						<div class="input-group flex-column" id="emailInputGroup">
+						  <input class="form-control w-100" aria-label="Insert your E-Mail to receive our Newsletter" type="text" id="emailInput" placeholder="E-mail" aria-placeholder="e-mail">
+								<a href="https://media.istockphoto.com/photos/thank-you-picture-id598953802?k=6&m=598953802&s=612x612&w=0&h=JgvaLqX4wUK-Zwr3l5gIsrSJZGYBXGnqSx3YHzT3XkM=" class="text-grey" >
+									<button
+										class="btn w-100"
+                    type="button"
+                    id="subscribeBtn"
+                  >
+										Subscribe
+									</button>
+								</a>
 						</div>
 					</div>
 					<div class="col-md-6">
