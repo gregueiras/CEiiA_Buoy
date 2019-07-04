@@ -6,7 +6,11 @@
         {# Select wishlists that contains product #}
         {% wishlists_containing_product wishlists product as product_wishlists %}
         {% if wishlists %}
-
+            <style>
+                .btn-wishlist > a {
+                    background: #ddd;
+                }
+            </style>
             <div class="btn-group btn-wishlist">
                 <a class="btn btn-lg dropdown-toggle" data-toggle="dropdown" href="#">{% trans "Add to wish list" %} <span class="caret"></span></a>
                 <ul class="dropdown-menu pull-right">
