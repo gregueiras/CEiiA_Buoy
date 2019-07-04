@@ -9,7 +9,6 @@ django-heroku = "*"
 django-oscar = "*"
 pycountry= "*"
 django-mptt= "*"
-sorl-thumbnail= "*"
 
 [dev-packages]
 autopep8 = "*"
