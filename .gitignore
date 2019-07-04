@@ -105,3 +105,4 @@ venv.bak/
 
 .idea/**
 staticfiles/**
+.vscode/settings.json

@@ -34,40 +34,44 @@
 
         <div class="navbar-collapse primary-collapse collapse">
             {% block nav_dropdown %}
-                <ul id="browse" class="nav navbar-nav">
-                    <li class="dropdown active {% if expand_dropdown %}open{% endif %}">
-                        <a href="#" class="dropdown-toggle" {% if not expand_dropdown %} data-toggle="dropdown"{% endif %}>
+                <nav id="browse" class="nav navbar-nav">
+                        <button class="btn dropdown-toggle"
+                        type="button"
+                        id="dropdownAllCategories"
+                        {% if not expand_dropdown %}
+                        data-toggle="dropdown"{% endif %}
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        style="margin-top: 0.5em;">
                             {% trans "Browse store" %}
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu" data-navigation="dropdown-menu">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownAllCategories" style="position: absolute!important; "> 
                             {% category_tree depth=2 as tree_categories %}
-                            <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+                            <a class="dropdown-item" tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a>
                             {% if tree_categories %}
-                                <li class="divider"></li>
+                                <span class="divider"></span>
                                 {% for tree_category, info in tree_categories %}
                                     {% if info.has_children %}
-                                        <li class="dropdown-submenu">
-                                            <a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
-                                            <ul class="dropdown-menu">
+                                        <div class="dropdown-submenu">
+                                            <a class="dropdown-item" tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                                            <div class="dropdown-menu">
                                             {% else %}
-                                                <li><a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+                                                <div><a class="dropdown-item" tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></div>
                                             {% endif %}
 
                                             {% for close in info.num_to_close %}
-                                                </ul></li>
+                                            </div></div>
                                             {% endfor %}
                                 {% endfor %}
                             {% endif %}
-                            <li class="divider"></li>
+                            <span class="divider"></span>
                             {% block nav_dropdown_extra_items %}
-                                <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                                <a class="dropdown-item" href="{% url 'offer:list' %}">{% trans "Offers" %}</a>
                             {% endblock %}
-                        </ul>
-                    </li>
+                            </div>
                     {% block nav_extra %}
                     {% endblock %}
-                </ul>
+                </nav>
             {% endblock %}
             {% include "partials/search.html" %}
         </div><!-- /navbar-collapse -->
