@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4c595ea57926ca9a23f8e7d83b7a538f9451fdf10a0970399e4bd9d898ef6fa9"
+            "sha256": "95f1603a5fd148c80020f15a9e87b98cc57c5de1a54c8e96de510db3d7701d1a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -32,10 +32,10 @@
         },
         "django": {
             "hashes": [
-                "sha256:65e2a548a52fca560cdd4e35f4fa1a79140f405af48950e59702a37e4227e958",
-                "sha256:d4244e2c9653e1349b37ab0cdf108607ba9d1e41f71d0711ac71360e4026ce94"
+                "sha256:4d23f61b26892bac785f07401bc38cbf8fa4cec993f400e9cd9ddf28fd51c0ea",
+                "sha256:6e974d4b57e3b29e4882b244d40171d6a75202ab8d2402b8e8adbd182e25cf0c"
             ],
-            "version": "==2.1.10"
+            "version": "==2.2.3"
         },
         "django-extra-views": {
             "hashes": [
@@ -59,11 +59,11 @@
         },
         "django-oscar": {
             "hashes": [
-                "sha256:8374db386c7a5270f636b2810a74d02bcb4fa3e7e8279b74ba5a819c24af106a",
-                "sha256:c2135ddb048bd59bd3c662e8217ab813bc0c068797e91624c281e3615507f45f"
+                "sha256:201bfaade00754a51fd2e037de609e3f887c3e05b52172d61a9ee2d5e696e511",
+                "sha256:ded2da0c58f43bdf5bf4d44042cb1c0c86de6b310edcc5f06b16e0d3b4e3ae5e"
             ],
             "index": "pypi",
-            "version": "==1.6.7"
+            "version": "==2.0"
         },
         "django-phonenumber-field": {
             "hashes": [
@@ -111,20 +111,6 @@
             ],
             "index": "pypi",
             "version": "==19.9.0"
-        },
-        "mock": {
-            "hashes": [
-                "sha256:5ce3c71c5545b472da17b72268978914d0252980348636840bd34a00b5cc96c1",
-                "sha256:b158b6df76edd239b8208d481dc46b6afd45a846b7812ff0ce58971cf5bc8bba"
-            ],
-            "version": "==2.0.0"
-        },
-        "pbr": {
-            "hashes": [
-                "sha256:9181e2a34d80f07a359ff1d0504fad3a47e00e1cf2c475b0aa7dcb030af54c40",
-                "sha256:94bdc84da376b3dd5061aa0c3b6faffe943ee2e56fa4ff9bd63e1643932f34fc"
-            ],
-            "version": "==5.3.1"
         },
         "phonenumbers": {
             "hashes": [
@@ -216,12 +202,12 @@
             ],
             "version": "==1.12.0"
         },
-        "sorl-thumbnail": {
+        "sqlparse": {
             "hashes": [
-                "sha256:1cc6d913fe4f1224e479f25a23ec2ad3ca71c3154919a2c9463b07e7fbe11ac2",
-                "sha256:c5ef989da07d31925754922ce95783fd2b1f8735124c0510884633eb32a4cd3e"
+                "sha256:40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177",
+                "sha256:7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"
             ],
-            "version": "==12.4.1"
+            "version": "==0.3.0"
         },
         "text-unidecode": {
             "hashes": [
@@ -229,13 +215,6 @@
                 "sha256:801e38bd550b943563660a91de8d4b6fa5df60a542be9093f7abf819f86050cc"
             ],
             "version": "==1.2"
-        },
-        "unidecode": {
-            "hashes": [
-                "sha256:092cdf7ad9d1052c50313426a625b717dab52f7ac58f859e09ea020953b1ad8f",
-                "sha256:8b85354be8fd0c0e10adbf0675f6dc2310e56fda43fa8fe049123b6c475e52fb"
-            ],
-            "version": "==1.0.23"
         },
         "whitenoise": {
             "hashes": [
@@ -245,5 +224,20 @@
             "version": "==4.1.2"
         }
     },
-    "develop": {}
+    "develop": {
+        "autopep8": {
+            "hashes": [
+                "sha256:4d8eec30cc81bc5617dbf1218201d770dc35629363547f17577c61683ccfb3ee"
+            ],
+            "index": "pypi",
+            "version": "==1.4.4"
+        },
+        "pycodestyle": {
+            "hashes": [
+                "sha256:95a2219d12372f05704562a14ec30bc76b05a5b297b21a5dfe3f6fac3491ae56",
+                "sha256:e40a936c9a450ad81df37f549d676d127b1b66000a6c500caa2b085bc0ca976c"
+            ],
+            "version": "==2.5.0"
+        }
+    }
 }
