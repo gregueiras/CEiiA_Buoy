@@ -10,6 +10,7 @@ django-oscar = "*"
 pycountry= "*"
 django-mptt= "*"
 sorl-thumbnail= "*"
+markdown2= "*"
 
 [dev-packages]
 autopep8 = "*"
