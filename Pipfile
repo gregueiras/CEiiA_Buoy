@@ -8,6 +8,7 @@ gunicorn = "*"
 django-heroku = "*"
 django-oscar = "*"
 pycountry= "*"
+django-mptt= "*"
 
 [dev-packages]
 autopep8 = "*"
