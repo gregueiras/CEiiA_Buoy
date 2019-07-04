@@ -212,3 +212,7 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+.container-fluid.dashboard {
+  width: 100%;
+}
