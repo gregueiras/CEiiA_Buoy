@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'mapa',
     'contact',
 	'faq',
-    'challenge'
+    'challenge',
+    'sorl.thumbnail',
 ]+ get_core_apps()+ get_machina_apps()
 
 SITE_ID =1
