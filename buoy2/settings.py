@@ -133,6 +133,7 @@ DATABASES = {
 STATICFILES_DIRS = (
     # ...
     MACHINA_MAIN_STATIC_DIR,
+    'favicon',
 )
 
 CACHES = {
