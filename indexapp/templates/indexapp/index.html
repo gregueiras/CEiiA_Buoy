@@ -429,6 +429,7 @@ i.box-circle-solid{
 .intro .carousel-item::before{
 	content:"";
 	background:url('../static/index/img/carrouselfundo.jpg');
+	background-repeat: no-repeat;
 	position: absolute;
 	width:100%;
 	height: 100vh;
@@ -1080,6 +1081,34 @@ ul.breadcrumb > li {
 .navbar-toggler-icon {
 	padding-top: 0.3em;
 }
+
+img.omg-responsive {
+	width: 325px;
+	height: 70px;
+}
+
+body > nav > div > a.navbar-brand {
+	margin-right: 0px!important;
+}
+
+html > body > nav > div.container > div.spacer {
+	flex-grow: 2;
+}
+
+@media (max-width: 430px) {
+	img.omg-responsive {
+		width: 217px;
+		height: 35px;
+	}
+}
+
+@media (max-width: 310px) {
+	img.omg-responsive {
+		width: 163px;
+		height: 35px;
+	}
+}
+
     </style>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -1090,7 +1119,8 @@ ul.breadcrumb > li {
 {% block cabeçalho %}
 <nav style="background-color: #fff;" class="navbar navbar-expand-lg fixed-top top navbar-top">
 	<div class="container">
-		  <a class="navbar-brand" href="/"><img src="{% static 'index/img/logo.png' %}" class="omg-responsive" style='width:325px;height:70px;'></a>
+			<a class="navbar-brand" href="/"><img src="{% static 'index/img/logo.png' %}" class="omg-responsive" ></a>
+			<div class="spacer"></div>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 		  </button>
