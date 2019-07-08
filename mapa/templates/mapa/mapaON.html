@@ -43,7 +43,7 @@
     	var map = L.map('map',{ center: [0,0], zoom: 1.1});
 
     	// Add OpenStreetMap tile layer to map element
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a>' }).addTo(map);
+		L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a>' }).addTo(map);
 		
         // Create an Empty Popup
         var popup = L.popup();
@@ -62,7 +62,7 @@
 		
 		
         // load GeoJSON from an external file
-        $.getJSON("http://geoserver.emodnet-physics.eu/geoserver/emodnet/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=emodnet:PlatformDriftBuoy&maxFeatures=50&outputFormat=application%2Fjson",function(data){
+        $.getJSON("https://geoserver.emodnet-physics.eu/geoserver/emodnet/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=emodnet:PlatformDriftBuoy&maxFeatures=50&outputFormat=application%2Fjson",function(data){
             // add GeoJSON layer to the map once the file is loaded
             L.geoJson(data,{
                 onEachFeature: function (feature, layer) {
