@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
     <title>Leaflet Map</title>
     {% block favicon %}
         <link rel="shortcut icon" type="image/png" href="{% static 'favicon-64.png' %}">
@@ -27,48 +30,31 @@
         <meta name="msapplication-config" content="{% static 'browserconfig.xml">' %}   
     {% endblock %}
 	<!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 </head>
 <body>
 {% include "indexapp/index.html" %}
 	<!-- Our web map and content will go here -->
-    <div id="map" style="width: 75%; height: 1000px; margin: auto;"></div>
+    <div id="mapid" style="height: 800px; width: 80%; margin: 0 auto;"></div>
         {% include "indexapp/footer.html" %}
 
 	<!-- Add the Leaflet JavaScript library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-	<script>
-    	// Create variable to hold map element, give initial settings to map
-    	var map = L.map('map',{ center: [0,0], zoom: 1.1});
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <script>
+    	var mymap = L.map('mapid').setView([30, -40], 3);
 
-    	// Add OpenStreetMap tile layer to map element
-		L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a>' }).addTo(map);
-		
-        // Create an Empty Popup
-        var popup = L.popup();
-         
-        // Write function to set Properties of the Popup
-        function onMapClick(e) {
-            popup
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(map);
-        }
-         
-        // Listen for a click event on the Map element
-        map.on('click', onMapClick);
-		
-		
-		
-        // load GeoJSON from an external file
-        $.getJSON("https://geoserver.emodnet-physics.eu/geoserver/emodnet/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=emodnet:PlatformDriftBuoy&maxFeatures=50&outputFormat=application%2Fjson",function(data){
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoiZ29uY2EwMDciLCJhIjoiY2psdzc0dDhxMG56bzNwcGEzY3pidzZreCJ9.82sUp-cLoxpRgtqFmSXvZQ'
+        }).addTo(mymap);
+
+        $.getJSON("/static/map.geojson").then( data => {
             // add GeoJSON layer to the map once the file is loaded
-            L.geoJson(data,{
-                onEachFeature: function (feature, layer) {
-                    layer.bindPopup(feature.properties.name);
-                }
-            }).addTo(map);
+            L.geoJson(data).addTo(mymap);
         });	
     </script>
     
