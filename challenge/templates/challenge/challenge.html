@@ -23,8 +23,8 @@
             });
 
             // Add OpenStreetMap tile layer to map element
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
             // Create point feature for Kendall Square T Station
@@ -72,7 +72,7 @@
             map.on('click', onMapClick);
 
             // load GeoJSON from an external file
-            $.getJSON("http://duspviz.mit.edu/sessions/leaflet/data/coffee_cafes.js", function (data) {
+            $.getJSON("https://duspviz.mit.edu/sessions/leaflet/data/coffee_cafes.js", function (data) {
                 // add GeoJSON layer to the map once the file is loaded
                 L.geoJson(data, {
                     onEachFeature: function (feature, layer) {
