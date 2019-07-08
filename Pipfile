@@ -33,4 +33,4 @@ Django = "==2.2.3"
 Pillow = "==6.1.0"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6.5"
