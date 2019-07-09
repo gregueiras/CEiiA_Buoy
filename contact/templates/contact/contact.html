@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	crossorigin="" />
 	<title>Contact | Multi Business Bootstrap Template Grafreez</title>
 	{% block favicon %}
 		<link rel="shortcut icon" type="image/png" href="{% static 'favicon-64.png' %}">
@@ -74,46 +77,40 @@
 </section>
 
 <!-- Contact us form 3 -->
-<section class="contact-section">
-	<div class="float-left w-100">
-		<div id="map"></div>
-	</div>
-</section>
 <section class="contact-section py-5">
-	<div class="container">
+	<div class="w-75 mx-auto">
 		<div class="row">
 			<div class="head-box text-center mb-3 col-md-12">
 				<h2>Where to find us</h2>
 				<h6 class="text-underline-grey mb-5">Not only on the sea but also on land!</h6>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-10 offset-sm-1 offset-md-1 offset-lg-0 bg-primary pl-5 py-4">
-				<h3 class="text-white">Our Address</h3>
-				<div class="media py-4">
-				  <i class="fa fa-map-marker d-flex mr-3 fa-lg text-white mt-1" aria-hidden="true"></i>
-				  <div class="media-body text-white">
-				    <h5 class="mt-0">OPorto</h5>
-				    <p>017, Av. Dom Afonso Henriques <br>
-				    1825, Porto, Matosinhos<br>
-				    <i class="fa fa-phone mr-2"></i> +351 xxx xxx xxx<br>
-				    <i class="fa fa-envelope mr-2"></i> oporto.office@floaty-mcbuoy.com
-				    </p>
-				  </div>
-				</div>
-
-				<div class="media pb-3">
+			<div style="width: 100%; display: flex;">
+				<div class="col-lg-3 col-md-4 col-sm-2 offset-sm-1 offset-md-1 offset-lg-0 bg-primary pl-3 py-4">
+					<h3 class="text-white">Our Address</h3>
+					<div class="media py-4">
+						<i class="fa fa-map-marker d-flex mr-3 fa-lg text-white mt-1" aria-hidden="true"></i>
+						<div class="media-body text-white">
+							<h5 class="mt-0">Porto</h5>
+							<p>17,  Av. Dom Afonso Henriques <br>
+							1825, Porto, Matosinhos<br>
+							<i class="fa fa-phone mr-2"></i> +351 22 016 4800<br>
+							<i class="fa fa-envelope mr-2"></i> oporto.office@floaty-mcbuoy.com
+							</p>
+						</div>
+					</div>
+					<div class="media pb-3">
 				  <i class="fa fa-map-marker d-flex mr-3 fa-lg text-white mt-1" aria-hidden="true"></i>
 				  <div class="media-body text-white">
 				    <h5 class="mt-0">New York</h5>
-				    <p>Rua Dom Gonçalo Cardoso<br>
-				    8895, Anadia<br>
-				    <i class="fa fa-phone mr-2"></i> +351 xxx xxx xxx<br>
+				    <p>55 Water St<br>
+						New York, NY 10041, EUA<br>
+				    <i class="fa fa-phone mr-2"></i> +1 202 555 0190<br>
 				    <i class="fa fa-envelope mr-2"></i> ny.office@floaty-mcbuoy.com
 				    </p>
 				  </div>
 				</div>
-
-			</div>
-			<div class="col-lg-8 col-md-6 col-sm-10 offset-sm-1 offset-md-0 offset-lg-0 form-sec bg-light mr-0 p-5">
+				</div>
+			<div class="col-lg-9 col-md-8 col-sm-10 offset-sm-1 offset-md-0 offset-lg-0 form-sec mr-0 p-5" style="background: #ddd;">
 				<form>
 				  <h2 class="mb-4">Contact Us!</h2>
 				  <div class="row">
@@ -160,14 +157,52 @@
 		</div>
 	</div>
 </section>
+<section class="contact-section">
+	<div class="float-left w-100">
+		<div id="mapid" style="height: 400px; width: 80%; margin: 0 auto; margin-top: 2em;"></div>
+	</div>
+</section>
 
 <!-- Footer Block 1 -->
 {% include "indexapp/footer.html"%}
 <!-- Javascript Files  -->
 <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="{% static 'contact/js/bootstrap.min.js' %}"></script>
-<script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?callback=initMap"></script>
-<!--<script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key=add your google map api key here&callback=initMap"></script>    -->
 <script src="{% static 'contact/js/core.js' %}"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+			integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+			crossorigin=""></script>
+		<script>
+			const icon = new L.Icon({
+				iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+				shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+				iconSize: [25, 41],
+				iconAnchor: [12, 41],
+				popupAnchor: [1, -34],
+				shadowSize: [41, 41],
+			});
+
+			const mymap = L.map('mapid').setView([40, -40], 4);
+
+			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+				maxZoom: 18,
+				id: 'mapbox.streets',
+				accessToken: 'pk.eyJ1IjoiZ29uY2EwMDciLCJhIjoiY2psdzc0dDhxMG56bzNwcGEzY3pidzZreCJ9.82sUp-cLoxpRgtqFmSXvZQ'
+			}).addTo(mymap);
+
+			$.getJSON("/static/offices.geojson").then(data => L.geoJson(data, {
+				pointToLayer: function (feature, latlng) {
+					return L.marker(latlng, { icon });
+				},
+				onEachFeature: function (feature, layer) {
+					if (feature && feature.properties && feature.properties.popupContent) {
+						layer.bindPopup(feature.properties.name);
+					}
+				},
+			}).addTo(mymap));
+		</script>
 </body>
 </html>
