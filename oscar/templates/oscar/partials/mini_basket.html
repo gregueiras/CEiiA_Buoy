@@ -47,9 +47,7 @@
         {% endif %}
     </div>
     <span class="btn-group">
-        <a class="btn btn-default" href="{% url 'basket:summary' %}">{% trans "View basket" %}</a>
-        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        </button>
+        <a class="btn btn-default" href="{% url 'basket:summary' %}" style="margin-bottom: 0.5em; margin-top: 0.5em; border-radius: 4px;">{% trans "View basket" %}</a>
         <div class="dropdown-menu page-header action">
             <li>{% include "basket/partials/basket_quick.html" %}</li>
         </div>

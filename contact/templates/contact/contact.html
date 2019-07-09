@@ -1,11 +1,12 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
 	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
 	crossorigin="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact | Multi Business Bootstrap Template Grafreez</title>
 	{% block favicon %}
 		<link rel="shortcut icon" type="image/png" href="{% static 'favicon-64.png' %}">
@@ -116,8 +117,8 @@
 				  <div class="row">
 				  	<div class="col-md-6">
 						<div class="form-group">
-							<label class="sr-only" for="formGroupExampleInput">Full Name</label>
-							<input class="form-control" id="formGroupExampleInput" placeholder="Full Name" type="text">
+							<label class="sr-only" for="formGroupExampleInput" id="fgLabel1">Full Name </label>
+							<input class="form-control" id="formGroupExampleInput" placeholder="Full Name" type="text" aria-label="Full Name" aria-labelledby="fgLabel1">
 						</div>
 				  	</div>
 				  	<div class="col-md-6">
@@ -130,22 +131,22 @@
 				  <div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
-							<label class="sr-only" for="formGroupExampleInput2">Email Address</label>
-							<input class="form-control" id="formGroupExampleInput2" placeholder="Email Address" type="email">
+							<label class="sr-only" for="formGroupExampleInput3">Email Address</label>
+							<input class="form-control" id="formGroupExampleInput3" placeholder="Email Address" type="email">
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<label class="sr-only" for="formGroupExampleInput2">Address</label>
-							<input class="form-control" id="formGroupExampleInput2" placeholder="Enter Address" type="email">
+							<label class="sr-only" for="formGroupExampleInput4">Address</label>
+							<input class="form-control" id="formGroupExampleInput4" placeholder="Enter Address" type="email">
 						</div>
 					</div>
 				  </div>
 				  <div class="row">
 				  	<div class="col-md-12">
 						<div class="form-group">
-							<label class="sr-only" for="formGroupExampleInput2">Message</label>
-							<textarea class="form-control" placeholder="Enter your message here!" rows="4"></textarea>
+							<label class="sr-only" for="formGroupExampleInput5">Message</label>
+							<textarea class="form-control" id="formGroupExampleInput5" placeholder="Enter your message here!" rows="4"></textarea>
 						</div>
 						<div class="form-group">
 							<button class="btn btn-primary btn-capsul">Submit</button>
@@ -167,10 +168,10 @@
 {% include "indexapp/footer.html"%}
 <!-- Javascript Files  -->
 <script  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script rel="preconnect" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="{% static 'contact/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'contact/js/core.js' %}"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
 			integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
 			crossorigin=""></script>
