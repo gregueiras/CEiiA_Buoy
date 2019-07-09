@@ -134,7 +134,7 @@ STATICFILES_DIRS = (
     # ...
     MACHINA_MAIN_STATIC_DIR,
     'favicon',
-    'staticfiles/geojson',
+    'geojson',
 )
 
 CACHES = {

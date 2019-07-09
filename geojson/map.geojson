@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Escola Secundária de Oliveira de Azeméis",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -35.947265625,
+          26.667095801104814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Escola Secundária de Barcelos",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -24.169921875,
+          33.284619968887675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Escola Secundária António Damásio",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -47.109375,
+          34.379712580462204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Colexio Apóstol Santiago - Xesuítas Vigo",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -39.990234375,
+          12.211180191503997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Instituto de Educación Secundaria Ies de Coruxo N 11",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -22.060546874999996,
+          43.13306116240612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "IES Castelao",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -24.78515625,
+          40.245991504199026
+        ]
+      }
+    }
+  ]
+}

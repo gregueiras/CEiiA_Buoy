@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "NYC Office",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0091,
+          40.7032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CEiiA",
+        "popupContent": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.6801354,
+          41.1729351
+        ]
+      }
+    }
+  ]
+}
