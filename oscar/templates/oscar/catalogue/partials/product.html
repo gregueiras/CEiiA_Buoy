@@ -10,7 +10,7 @@
             <div class="product-image">
                 {% with image=product.primary_image %}
                     {% thumbnail image.original "x155" upscale=False as thumb %}
-                    <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="thumbnail" style="object-fit: contain;"></a>
+                    <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="thumbnail" style="object-fit: contain;display: block;margin-left: auto;margin-right: auto;"></a>
                     {% endthumbnail %}
                 {% endwith %}
             </div>
