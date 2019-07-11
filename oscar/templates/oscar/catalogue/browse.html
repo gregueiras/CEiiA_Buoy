@@ -97,7 +97,7 @@
                 <div class="row">
                     {% for product in products %}
                         {% if forloop.first %}
-                        <div class="pl-0 col-lg-3 col-md-6 col-sm-6 mb-4">{% render_product product %}</div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4 first_prod_catalogue">{% render_product product %}</div>
                         {% else %}
                         <div class="col-lg-3 col-md-6 col-sm-6 mb-4">{% render_product product %}</div>
                         {% endif %}

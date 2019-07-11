@@ -134,10 +134,7 @@ h1,h2,h3,h4,h5{
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
 }
-h6{
-	position: relative;
-	text-transform: uppercase;
-}
+
 .bg-primary{
 	background-color: #0028DC!important;
 }
@@ -369,15 +366,6 @@ i.box-circle-solid{
 
 
 /* ========== Intro Header ========== */
-.intro{
-	float: left;
-	width:100%;
-	display: flex;
-	align-items:center;
-	height:100%;
-	position: relative;
-	z-index: 1;
-}
 .intro.intro-small{
 	height: 60%;
 }
@@ -414,17 +402,60 @@ i.box-circle-solid{
 	height: 100vh;
 }
 .intro  .carousel-caption{
-	top:15%;
+	top:25%;
 }
 
 /* ========== Who We Are ========== */
 
-.info-section{
-	float: left;
-	width:100%;
-	position: relative;
-	z-index: 1;
+@media (max-width: 573px) {
+	body > section.info-section.mt-4 > div > div.row > div.col-lg-5.copy-container {
+		padding-right: 1em!important;
+	}
+
+	.info-section.mt-4 {
+		margin-top: 6em!important;
+	}
+
+	.carousel-caption {
+		top: 20%!important;
+		margin-top: -3em!important;
+	}
+
+	body > nav.navbar:first-of-type {
+		position: -webkit-sticky!important;
+		position: sticky!important;
+		margin-top: -50px;
+		background-color: white!important;
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: -2em;
+	}
+
+	body > nav.navbar:first-of-type * {
+		background-color: white!important;
+	}
+	
+	body > nav.navbar:first-of-type > .container {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	body > .intro,
+	body > header, 
+	body > #main_container,
+	body > .copy-content-sec {
+		margin-top: 6em;
+	}
+
 }
+
+@media (min-width: 573px) {
+	.first_prod_catalogue {
+		padding-left: 0!important;
+	}
+}
+
 .info-section h2{
 	font-weight: 700;
 	font-size: 2.5rem;
@@ -553,7 +584,6 @@ i.box-circle-solid{
 .copy-content-sec{
 	float: left;
 	width:100%;
-	padding:5rem 0;
 	position: relative;
 	z-index: 1;
 }
@@ -746,7 +776,6 @@ ul.social-box li {
 .copy-content-sec{
 	float: left;
 	width:100%;
-	padding:5rem 0;
 	position: relative;
 	z-index: 1;
 }
@@ -892,9 +921,6 @@ ul.social-box li {
 	}
 	.intro .intro-form-small input[type="text"], .intro .intro-form-small input[type="password"]{
 		width: 36%;
-	}
-	.intro .carousel-caption{
-		top:10%;
 	}
 	.widget.widget-counter .container{
 		width: 100%;
@@ -1075,7 +1101,7 @@ html > body > nav > div.container > div.spacer {
 
 @media (max-width: 430px) {
 	img.omg-responsive {
-		width: 217px;
+		width: 163px;
 		height: 35px;
 	}
 }
@@ -1095,7 +1121,7 @@ html > body > nav > div.container > div.spacer {
 <body>
 <!-- Top navigation -->
 {% block cabeçalho %}
-<nav style="background-color: #fff;" class="navbar navbar-expand-lg fixed-top top navbar-top">
+<nav href="#" style="background-color: #fff;" class="navbar navbar-expand-lg fixed-top top navbar-top">
 	<div class="container">
 			<a class="navbar-brand" href="/"><img src="{% static 'index/img/logo.png' %}" class="omg-responsive" aria-label="Logo of Floaty McBuoy, redirects to main page"></a>
 			<div class="spacer"></div>

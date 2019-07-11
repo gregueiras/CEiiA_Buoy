@@ -38,7 +38,7 @@
 </style>
 
 <div class="basket-mini pull-right hidden-xs" id="cartBar">
-    <div id="cartTotal">
+    <div id="cartTotal" class="my-auto">
         <strong>{% trans "Basket total:" %}</strong>
         {% if request.basket.is_tax_known %}
             {{ request.basket.total_incl_tax|currency:request.basket.currency }}
