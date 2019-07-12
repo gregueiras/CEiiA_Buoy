@@ -44,10 +44,13 @@
 {% include "indexapp/index.html" %}
 <style>
 	
-#addresses {
+.carousel-caption {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	height: auto;
+	margin-top: auto!important;
+	margin-bottom: auto;
+	top: 35%!important;
 }
 
 @media (max-width: 778px) {
@@ -76,40 +79,41 @@
 }
 </style>
 <section class="intro carousel slide bg-overlay-light h-100" id="carouselExampleCaptions">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active">
-       <!--- miss -->
-        <div class="carousel-caption ">
-		<i class="fa fa-phone"></i>
-          	<h2 class="display-4 text-white mb-2 mt-4">Get in touch with us! </h2>
-			<p class="text-white mb-3 px-5 lead">We're one click away</p>
-			<a href="#" class="btn btn-primary btn-capsul px-4 py-2">Explore More</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block img-fluid" alt="First slide" src="#">
-        <div class="carousel-caption ">
-          	<h2 class="display-4 text-white mb-2 mt-4">Tell us what's on your mind!</h2>
-			<p class="text-white mb-3 px-5 lead">Here's where you can tell us what's on your mind</p>
-			<a href="#" class="btn btn-primary btn-capsul px-4 py-2">Explore More</a>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="carousel-item active">
+			<!--- miss -->
+			<div class="carousel-caption ">
+				<h2 class="display-4 text-white mb-2">Why do we love the sea? It is because it has some potent power to make us
+					think things we like to think.</h2>
+				<p class="text-white mb-3 px-5 lead">Let's make our dreams tomorrow's reality.</p>
+				<a href="/faq/" class="btn btn-primary btn-capsul px-4 mt-5">Tell me more!</a>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img class="d-block img-fluid" alt="First slide" src="#">
+			<div class="carousel-caption ">
+				<h2 class="display-4 text-white mb-2">Never before in history has innovation offered promise of so much to so
+					many in so short time.</h2>
+				<p class="text-white mb-3 px-5 lead">Bill Gates</p>
+				<a href="/faq/" class="btn btn-primary btn-capsul px-4 mt-5">Tell me more!</a>
+			</div>
+		</div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
 </section>
-
 <!-- Contact us form 3 -->
+<div id="main_container">
 <section class="contact-section py-5">
 	<div class="w-75 mx-auto" id="contact-form-section">
 		<div class="row">
@@ -197,7 +201,7 @@
 		<div id="mapid" style="height: 400px; width: 95%; margin: 0 auto; margin-top: 2em;"></div>
 	</div>
 </section>
-
+</div>
 <!-- Footer Block 1 -->
 {% include "indexapp/footer.html"%}
 <!-- Javascript Files  -->
