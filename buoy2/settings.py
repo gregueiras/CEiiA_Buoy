@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'contact',
 	'faq',
     'challenge',
-    'storages',
 ]+ get_core_apps()+ get_machina_apps()
 
 SITE_ID =1
@@ -203,26 +202,5 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_TMP = os.path.join(BASE_DIR, 'static')
-
-os.makedirs(STATIC_TMP, exist_ok=True)
 
 django_heroku.settings(locals())
-
-AWS_ACCESS_KEY_ID = "AKIAUZFQUJXUAKCC4PPX"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = "floaty-mcbuoy"
-
-AWS_DEFAULT_ACL = "public-read"
-
-
-AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000',
-}
-
-AWS_S3_REGION_NAME = "eu-west-3"
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
