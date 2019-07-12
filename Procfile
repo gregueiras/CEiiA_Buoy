@@ -1,2 +1,2 @@
-release: python manage.py migrate --noinput
+release: mkdir -p -- "machina/static/machina/build"
 web: gunicorn buoy2.wsgi
