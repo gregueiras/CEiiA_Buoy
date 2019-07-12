@@ -135,6 +135,7 @@ STATICFILES_DIRS = (
     'geojson',
     'faq/static',
     'contact/static',
+    'machina/static/machina/b',
 )
 
 CACHES = {
