@@ -3,6 +3,7 @@
   background-color: lightgray;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
+  transition: color .15s;
 }	
 
 .navTeam > a:not(:hover) {
