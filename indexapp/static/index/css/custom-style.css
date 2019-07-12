@@ -1,0 +1,23 @@
+.navTeam > a {
+  margin-right: 0.1em;
+  background-color: lightgray;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}	
+
+.navTeam > a:not(:hover) {
+  color: darkslategray;
+}
+
+.navTeam > a:hover:not(.active) {
+  background-color: gray;
+}
+.navTeam > a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navTeam > .active {
+  color: white!important;
+  background-color: rgb(0,153,255);
+}

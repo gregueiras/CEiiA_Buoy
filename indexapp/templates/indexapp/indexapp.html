@@ -24,7 +24,8 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon-180.png' %}">
 		<meta name="msapplication-TileColor" content="#FFFFFF">
 		<meta name="msapplication-TileImage" content="{% static 'favicon-144.png' %}">
-		<meta name="msapplication-config" content="{% static 'browserconfig.xml">' %}   
+		<meta name="msapplication-config" content="{% static 'browserconfig.xml">' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/custom-style.css' %}">
 	{% endblock %}
 	</head>
 <body>
@@ -57,114 +58,269 @@ Portugal is reborning from the Discoveries Era</h6>
 		<img src="/static/index/img/sunset.jpg" class="img-fluid rounded" alt="picture of the buoy in the sea">
 		</div>
 		</div>
-		
 		<div class="three-panel-block mt-5">
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center mb-5 p-lg-3">
-						<img src="/static/index/img/goncalo.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Gonçalo Cardoso</h3>
-						<p class="px-4">21</p>
-						<p class="px-4">Aerospacial Eng.</p>
-						<p class="px-4">Software Team; Challenge</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center mb-5 p-lg-3">
-						<img src="/static/index/img/hugo.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Hugo Marques</h3>
-						<p class="px-4">21</p>
-						<p class="px-4">Eletronics and Computers Eng.</p>
-						<p class="px-4">Eletronics Team; Challenge</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center mb-5 p-lg-3">
-						<img src="/static/index/img/joaoesteves.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>João Esteves</h3>
-						<p class="px-4">19</p>
-						<p class="px-4">Aeronautical Eng.</p>
-						<p class="px-4">Structure and Design Team; Challenge</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center p-lg-3">
-						<img src="/static/index/img/ze.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>José Gonçalves</h3>
-						<p class="px-4">22</p>
-						<p class="px-4">Aeronautical Eng.</p>
-						<p class="px-4">Hydrodinamics Team; Challenge; Structure and Design</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center p-lg-3">
-						<img src="/static/index/img/zerocha.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>José Rocha</h3>
-						<p class="px-4">22</p>
-						<p class="px-4">Aeronautical Eng.</p>
-						<p class="px-4">Hydrodinamics Team; Challenge; Structure and Design</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center p-lg-3">
-						<img src="/static/index/img/madalena.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Madalena Cardoso</h3>
-						<p class="px-4">19</p>
-						<p class="px-4">Mechanical Eng.</p>
-						<p class="px-4">Structure and Design team; Challenge; Software; Economics Team</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center mb-5 p-lg-3">
-						<img src="/static/index/img/marlene.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Marlene Antunes</h3>
-						<p class="px-4">20</p>
-						<p class="px-4">Industrial Eng. and Management</p>
-						<p class="px-4">Software Team; Challenge</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center mb-5 p-lg-3">
-						<img src="/static/index/img/martinho.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Martinho Figueiredo</h3>
-						<p class="px-4">21</p>
-						<p class="px-4">Eletronics and Computers Eng.</p>
-						<p class="px-4">Technical Integrator; Software Team; Eletronics Team; Challenge; Project Management; And All Around cool guy B)</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center mb-5 p-lg-3">
-						<img src="/static/index/img/alunos_secundario.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Alunos de secundário</h3>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center p-lg-3">
-						<img src="/static/index/img/pedro.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Pedro Andrade</h3>
-						<p class="px-4">20</p>
-						<p class="px-4">Materials Eng.</p>
-						<p class="px-4">Materials Team; Software Team; Challenge;</p>					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center p-lg-3">
-						<img src="/static/index/img/ruben.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Rúben Meireles</h3>
-						<p class="px-4">21</p>
-						<p class="px-4">Aeronautical Eng.</p>
-						<p class="px-4">Materials Team; Hydrodinamics Team; Structure and Design Team; Project Management; Software Team; Challenge</p>					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="service-block-overlay text-center p-lg-3">
-						<img src="/static/index/img/teresa.jpg" class="img-fluid rounded" alt="picture of a member of the team" style="width: 240px; height: 240px;">
-						<h3>Teresa Ribeiro</h3>
-						<p class="px-4">19</p>
-						<p class="px-4">Industrial Eng. and Management</p>
-						<p class="px-4">Project Management; Challenge; Software Team; Economics </p>					</div>
-				</div
+			<div class="container">
+				<h1>Our Team</h1>
 			</div>
-		</div>
-	</div>
+			<div id="exTab1" class="container">
+				<ul class="nav nav-pills">
+					<li class="navTeam">
+						<a href="#1a" data-toggle="tab" class="active" >2018</a>
+					</li>
+					<li class="navTeam"><a href="#2a" data-toggle="tab">2019</a>
+					</li>
+					</li>
+				</ul>
+			
+				<div class="tab-content clearfix">
+					<div class="tab-pane active" id="1a">
+						<div class="row">
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center mb-5 p-lg-3">
+												<img src="/static/index/img/goncalo.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Gonçalo Cardoso</h3>
+												<p class="px-4">21</p>
+												<p class="px-4">Aerospacial Eng.</p>
+												<p class="px-4">Software Team; Challenge</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center mb-5 p-lg-3">
+												<img src="/static/index/img/hugo.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Hugo Marques</h3>
+												<p class="px-4">21</p>
+												<p class="px-4">Eletronics and Computers Eng.</p>
+												<p class="px-4">Eletronics Team; Challenge</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center mb-5 p-lg-3">
+												<img src="/static/index/img/joaoesteves.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>João Esteves</h3>
+												<p class="px-4">19</p>
+												<p class="px-4">Aeronautical Eng.</p>
+												<p class="px-4">Structure and Design Team; Challenge</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center p-lg-3">
+												<img src="/static/index/img/ze.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>José Gonçalves</h3>
+												<p class="px-4">22</p>
+												<p class="px-4">Aeronautical Eng.</p>
+												<p class="px-4">Hydrodinamics Team; Challenge; Structure and Design</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center p-lg-3">
+												<img src="/static/index/img/zerocha.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>José Rocha</h3>
+												<p class="px-4">22</p>
+												<p class="px-4">Aeronautical Eng.</p>
+												<p class="px-4">Hydrodinamics Team; Challenge; Structure and Design</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center p-lg-3">
+												<img src="/static/index/img/madalena.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Madalena Cardoso</h3>
+												<p class="px-4">19</p>
+												<p class="px-4">Mechanical Eng.</p>
+												<p class="px-4">Structure and Design team; Challenge; Software; Economics Team</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center mb-5 p-lg-3">
+												<img src="/static/index/img/marlene.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Marlene Antunes</h3>
+												<p class="px-4">20</p>
+												<p class="px-4">Industrial Eng. and Management</p>
+												<p class="px-4">Software Team; Challenge</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center mb-5 p-lg-3">
+												<img src="/static/index/img/martinho.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Martinho Figueiredo</h3>
+												<p class="px-4">21</p>
+												<p class="px-4">Eletronics and Computers Eng.</p>
+												<p class="px-4">Technical Integrator; Software Team; Eletronics Team; Challenge; Project Management; And All
+													Around cool guy B)</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center mb-5 p-lg-3">
+												<img src="/static/index/img/alunos_secundario.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Alunos de secundário</h3>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center p-lg-3">
+												<img src="/static/index/img/pedro.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Pedro Andrade</h3>
+												<p class="px-4">20</p>
+												<p class="px-4">Materials Eng.</p>
+												<p class="px-4">Materials Team; Software Team; Challenge;</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center p-lg-3">
+												<img src="/static/index/img/ruben.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Rúben Meireles</h3>
+												<p class="px-4">21</p>
+												<p class="px-4">Aeronautical Eng.</p>
+												<p class="px-4">Materials Team; Hydrodinamics Team; Structure and Design Team; Project Management; Software Team;
+													Challenge</p>
+											</div>
+										</div>
+										<div class="col-lg-4 col-md-6 col-sm-6">
+											<div class="service-block-overlay text-center p-lg-3">
+												<img src="/static/index/img/teresa.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+													style="width: 240px; height: 240px;">
+												<h3>Teresa Ribeiro</h3>
+												<p class="px-4">19</p>
+												<p class="px-4">Industrial Eng. and Management</p>
+												<p class="px-4">Project Management; Challenge; Software Team; Economics </p>
+											</div>
+										</div>
+						</div>
+					</div>
+				<div class="tab-pane" id="2a">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center mb-5 p-lg-3">
+									<img src="/static/index/img/goncalo.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Gonçalo Cardoso - V2</h3>
+									<p class="px-4">21</p>
+									<p class="px-4">Aerospacial Eng.</p>
+									<p class="px-4">Software Team; Challenge</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center mb-5 p-lg-3">
+									<img src="/static/index/img/hugo.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Hugo Marques - V2</h3>
+									<p class="px-4">21</p>
+									<p class="px-4">Eletronics and Computers Eng.</p>
+									<p class="px-4">Eletronics Team; Challenge</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center mb-5 p-lg-3">
+									<img src="/static/index/img/joaoesteves.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>João Esteves</h3>
+									<p class="px-4">19</p>
+									<p class="px-4">Aeronautical Eng.</p>
+									<p class="px-4">Structure and Design Team; Challenge</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center p-lg-3">
+									<img src="/static/index/img/ze.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>José Gonçalves</h3>
+									<p class="px-4">22</p>
+									<p class="px-4">Aeronautical Eng.</p>
+									<p class="px-4">Hydrodinamics Team; Challenge; Structure and Design</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center p-lg-3">
+									<img src="/static/index/img/zerocha.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>José Rocha</h3>
+									<p class="px-4">22</p>
+									<p class="px-4">Aeronautical Eng.</p>
+									<p class="px-4">Hydrodinamics Team; Challenge; Structure and Design</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center p-lg-3">
+									<img src="/static/index/img/madalena.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Madalena Cardoso</h3>
+									<p class="px-4">19</p>
+									<p class="px-4">Mechanical Eng.</p>
+									<p class="px-4">Structure and Design team; Challenge; Software; Economics Team</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center mb-5 p-lg-3">
+									<img src="/static/index/img/marlene.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Marlene Antunes</h3>
+									<p class="px-4">20</p>
+									<p class="px-4">Industrial Eng. and Management</p>
+									<p class="px-4">Software Team; Challenge</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center mb-5 p-lg-3">
+									<img src="/static/index/img/martinho.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Martinho Figueiredo</h3>
+									<p class="px-4">21</p>
+									<p class="px-4">Eletronics and Computers Eng.</p>
+									<p class="px-4">Technical Integrator; Software Team; Eletronics Team; Challenge; Project Management; And All
+										Around cool guy B)</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center mb-5 p-lg-3">
+									<img src="/static/index/img/alunos_secundario.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Alunos de secundário</h3>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center p-lg-3">
+									<img src="/static/index/img/pedro.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Pedro Andrade</h3>
+									<p class="px-4">20</p>
+									<p class="px-4">Materials Eng.</p>
+									<p class="px-4">Materials Team; Software Team; Challenge;</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center p-lg-3">
+									<img src="/static/index/img/ruben.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Rúben Meireles</h3>
+									<p class="px-4">21</p>
+									<p class="px-4">Aeronautical Eng.</p>
+									<p class="px-4">Materials Team; Hydrodinamics Team; Structure and Design Team; Project Management; Software Team;
+										Challenge</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="service-block-overlay text-center p-lg-3">
+									<img src="/static/index/img/teresa.jpg" class="img-fluid rounded" alt="picture of a member of the team"
+										style="width: 240px; height: 240px;">
+									<h3>Teresa Ribeiro</h3>
+									<p class="px-4">19</p>
+									<p class="px-4">Industrial Eng. and Management</p>
+									<p class="px-4">Project Management; Challenge; Software Team; Economics </p>
+								</div>
+							</div>
+						</div>				</div>
+				</div>
+			</div>
+
 </section>
 {% include "indexapp/footer.html" %}
 </body>
