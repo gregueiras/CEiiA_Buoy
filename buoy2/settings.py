@@ -134,6 +134,8 @@ STATICFILES_DIRS = (
     MACHINA_MAIN_STATIC_DIR,
     'favicon',
     'geojson',
+    'faq/static/faq/css',
+    'contact/static/contact/css',
 )
 
 CACHES = {
