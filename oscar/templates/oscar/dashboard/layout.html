@@ -7,12 +7,12 @@
 
 {% block styles %}
     {% if use_less %}
-        <link rel="stylesheet/less" type="text/css" href="{% static "oscar/less/dashboard.less" %}" />
+        <link rel="stylesheet/less" type="text/css" href="{% static 'oscar/less/dashboard.less' %}" />
     {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static "oscar/css/dashboard.css" %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/dashboard.css' %}" />
     {% endif %}
-        <link rel="stylesheet" type="text/css" href="{% static "oscar/css/dashboard.css" %}" />
-        <link rel="stylesheet" type="text/css" href="{% static "oscar/css/footer.css" %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/dashboard.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/footer.css' %}" />
 {% endblock %}
 
 {% block extrastyles %}

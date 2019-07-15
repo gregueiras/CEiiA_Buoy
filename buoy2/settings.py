@@ -206,4 +206,6 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 django_heroku.settings(locals())

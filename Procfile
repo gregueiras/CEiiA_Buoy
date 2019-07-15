@@ -1,2 +1,2 @@
-release: mkdir -p -- "machina/static/machina/build"
-web: gunicorn buoy2.wsgi
+release: python manage.py oscar_populate_countries
+web: gunicorn buoy2.wsgi 

@@ -21,6 +21,7 @@
 {% endblock %}
 
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/checkout.css' %}">
     <p class="lead">
         {% blocktrans with number=order.number %}
         Your order has been placed and a confirmation email has been sent - your order number is

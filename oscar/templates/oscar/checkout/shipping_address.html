@@ -44,7 +44,7 @@
                                             <button type="submit" class="btn btn-primary btn-large ship-address" data-loading-text="{% trans 'Saving...' %}">{% trans "Ship to this address" %}</button>
                                         {% endif %}
 
-                                        <div class="btn-group address-controls">
+                                        <div class="btn-group address-controls" style="top: 15px; right: 5px;">
                                             <a href="{% url 'checkout:user-address-update' pk=address.id %}" class="btn btn-default btn-sm">{% trans "Edit address" %}</a>
                                             <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
                                                 <span class="caret"></span>
