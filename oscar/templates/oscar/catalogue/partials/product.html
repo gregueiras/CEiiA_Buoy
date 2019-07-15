@@ -5,7 +5,7 @@
 {% load staticfiles %}
 
 {% block product %}
-    <div class="product-grid" style="height: 100%;">
+    <div class="product-grid" style="height: 100%; display: flex;flex-direction: column;justify-content: space-between;">
         {% block product_image %}
             <div class="product-image">
                 {% with image=product.primary_image %}
