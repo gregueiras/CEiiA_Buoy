@@ -1,42 +1,16 @@
 {% load currency_filters %}
 {% load i18n %}
+{% load staticfiles %}
 
 <style>
-    #cartBar {
-        margin-left: auto; 
-        padding-right: 15px;
-    }
-    
-    @media (max-width: 767px) {
-        #cartBar {
-            padding-left: 15px;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 1em;
-        }
-
-        #cartTotal {
-            vertical-align: text-bottom;
-        }
-
-        div.navbar > div.container-fluid {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        div.navbar > div.container-fluid > a {
-            float: right;
-            margin-left: auto;
-        }
-
-        div.navbar > div.container-fluid > div {
-            padding-left: 1em;    
-        }
-
-    }
+#cartBar {
+    margin-left: auto; 
+    padding-right: 15px;
+}
 </style>
 
+<link rel="stylesheet" type="text/css" href="{% static 'oscar/css/responsive.css' %}" >
+    
 <div class="basket-mini pull-right hidden-xs" id="cartBar">
     <div id="cartTotal" class="my-auto">
         <strong>{% trans "Basket total:" %}</strong>

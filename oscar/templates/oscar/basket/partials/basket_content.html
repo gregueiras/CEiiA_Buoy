@@ -59,6 +59,7 @@
                                 <p class="availability {{ session.availability.code }}">{{ session.availability.message }}</p>
                             </div>
                             <div class="col-sm-3">
+                                <strong class="hidden-xs-up">Quantity</strong>
                                 <div class="checkout-quantity">
                                     <div class="input-group  {% if form.errors %}error{% endif %}">
                                         {% render_field form.quantity class+="form-control" %}
@@ -89,26 +90,28 @@
                                 {% if not line.unit_price_incl_tax and not line.unit_tax_excl_tax %}
                                     <p class="align-right">&mdash;</p>
                                 {% else %}
-                                    <p class="price_color align-right">
+                                    <strong class="hidden-xs-up">Price</strong>
+                                    <span class="price_color align-right">
                                         {% if line.is_tax_known %}
                                             {{ line.unit_price_incl_tax|currency:line.price_currency }}
                                         {% else %}
                                             {{ line.unit_price_excl_tax|currency:line.price_currency }}
                                         {% endif %}
-                                    </p>
+                                    </span>
                                 {% endif %}
                             </div>
                             <div class="col-sm-2">
                                 {% if not line.line_price_incl_tax and not line_price_excl_tax %}
                                     <p class="align-right">&mdash;</p>
                                 {% else %}
-                                    <p class="price_color align-right">
+                                    <strong class="hidden-xs-up">Total</strong>
+                                    <span class="price_color align-right">
                                         {% if line.is_tax_known %}
                                             {{ line.line_price_incl_tax|currency:line.price_currency }}
                                         {% else %}
                                             {{ line.line_price_excl_tax|currency:line.price_currency }}
                                         {% endif %}
-                                    </p>
+                                    </span>
                                 {% endif %}
                             </div>
                         </div>

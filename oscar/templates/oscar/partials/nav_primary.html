@@ -1,6 +1,7 @@
 {% load currency_filters %}
 {% load category_tags %}
 {% load i18n %}
+{% load staticfiles %}
 
 <div class="navbar primary navbar-static-top navbar-inverse">
     <div class="container-fluid">
@@ -14,7 +15,7 @@
                 </span>
             </a>
         </div>
-
+        <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/responsive.css' %}">
         <a class="btn btn-default navbar-btn btn-cart navbar-right visible-xs-inline-block" href="{% url 'basket:summary' %}">
             <i class="icon-shopping-cart"></i>
             {% trans "Basket" %}
