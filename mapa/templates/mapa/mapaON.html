@@ -32,6 +32,13 @@
 	<!-- External Stylesheets -->
 </head>
 <body>
+<style>
+    @media (max-width: 573px) {
+        #mapid {
+            margin-top: 6em!important;
+        }
+    }
+</style>
 {% include "indexapp/index.html" %}
 	<!-- Our web map and content will go here -->
     <div id="mapid" style="height: 800px; width: 80%; margin: 0 auto; min-height: 80vh;"></div>
