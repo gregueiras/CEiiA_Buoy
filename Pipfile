@@ -29,8 +29,8 @@ django-oscar = "==2.0"
 pycountry = "==18.12.8"
 django-mptt = "==0.10.0"
 markdown2 = "==2.3.8"
-Django = "==2.2.4"
 Pillow = "==6.2.0"
+Django = "==2.2.8"
 
 [requires]
 python_version = "3.6.5"
